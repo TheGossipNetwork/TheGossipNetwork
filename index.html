@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gossip Network</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional CSS for styling -->
+</head>
+<body>
+    <h1>Welcome to The Gossip Network</h1>
+    <p>Share your latest whispers below:</p>
+
+    <form name="gossip" method="POST" data-netlify="true">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="gossip">Gossip:</label>
+        <textarea name="gossip" id="gossip" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Optional: Script to handle the form submission and show a message
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Your gossip has been submitted!');
+            form.reset(); // Resetează formularul
+        });
+    </script>
+</body>
+</html>
